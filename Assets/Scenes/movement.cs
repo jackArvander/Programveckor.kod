@@ -30,11 +30,11 @@ public class movement : MonoBehaviour
     {
         rb2d.mass = 25000;
 
-        if (Input.GetKey(right))
+        if (Input.GetKey(right) && isGrounded == true)
         {
             rb2d.AddForce(Vector3.right * force * Time.deltaTime);
         }
-        if (Input.GetKey(left))
+        if (Input.GetKey(left) && isGrounded == true)
         {
             rb2d.AddForce(Vector3.left * force * Time.deltaTime);
         }
@@ -58,17 +58,17 @@ public class movement : MonoBehaviour
         }
         if (Input.GetKeyDown(reset))
         {
-            transform.position = new Vector3(-13, 1, 0);
+            transform.position = new Vector3(-37, -4, -8);
         }
         if (isGrounded == true)
         {
             
-            rb2d.mass = 20;
+            rb2d.mass = 3;
 
         }
         else
         {
-            rb2d.mass = 15;
+            rb2d.mass = 5;
 
         }
 
