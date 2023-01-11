@@ -136,11 +136,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6804373134086156332, guid: e75c34a5d9da91b4f891e1219ad94d48, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -75.93945
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6804373134086156332, guid: e75c34a5d9da91b4f891e1219ad94d48, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 166.31557
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6804373134086156332, guid: e75c34a5d9da91b4f891e1219ad94d48, type: 3}
       propertyPath: m_LocalPosition.z
@@ -180,6 +180,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e75c34a5d9da91b4f891e1219ad94d48, type: 3}
+--- !u!1 &1524662944 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6804373134086156334, guid: e75c34a5d9da91b4f891e1219ad94d48, type: 3}
+  m_PrefabInstance: {fileID: 1112082185}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1524662950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524662944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 109f65b5f51a2144691096b0e246c75e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2d: {fileID: 0}
+  right: 0
+  left: 0
+  jump: 0
+  bigJump: 0
+  slam: 0
+  Keys: 0
+  force: 0
+  jumpForce: 0
+  bigJumpForce: 0
+  slamForce: 0
+  isGrounded: 0
+  isSlamming: 0
 --- !u!1 &1531451015
 GameObject:
   m_ObjectHideFlags: 0

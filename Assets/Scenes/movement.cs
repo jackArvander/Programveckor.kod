@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
+
+
     [SerializeField]
     public Rigidbody2D rb2d;
     public KeyCode right;
@@ -11,6 +13,7 @@ public class movement : MonoBehaviour
     public KeyCode jump;
     public KeyCode bigJump;
     public KeyCode slam;
+    public KeyCode reset;
     public int Keys;
     public float force;
     public float jumpForce;
@@ -21,11 +24,12 @@ public class movement : MonoBehaviour
 
     void Start()
     {
-
     }
 
     void Update()
     {
+        rb2d.mass = 25000;
+
         if (Input.GetKey(right))
         {
             rb2d.AddForce(Vector3.right * force * Time.deltaTime);
@@ -52,8 +56,24 @@ public class movement : MonoBehaviour
                 isGrounded = false;
             }
         }
+        if (Input.GetKeyDown(reset))
+        {
+            transform.position = new Vector3(-13, 1, 0);
+        }
+        if (isGrounded == true)
+        {
+            
+            rb2d.mass = 20;
+
+        }
+        else
+        {
+            rb2d.mass = 15;
+
+        }
 
     }
+
     public void OnCollisionEnter2D(Collision2D collision)
     {
 
@@ -62,6 +82,7 @@ public class movement : MonoBehaviour
         {
             isGrounded = true;
             isSlamming = false;
+
         }
 
 
