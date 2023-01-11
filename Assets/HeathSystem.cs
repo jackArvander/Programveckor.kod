@@ -18,15 +18,16 @@ public class HeathSystem : MonoBehaviour
     {
         if (health<=0)
         {
-            transform.position = new Vector3(-37, -4, -8);
         }
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "skada")
+        if (collision.gameObject.tag == "water")
         {
-            health =- 10f;
+
+            transform.position = new Vector3(-37, -4, -8);
+
         }
 
     }

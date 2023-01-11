@@ -22,19 +22,18 @@ public class movement : MonoBehaviour
     public bool isGrounded;
     public bool isSlamming;
 
-    void Start()
-    {
-    }
+
+
 
     void Update()
     {
-        rb2d.mass = 25000;
 
-        if (Input.GetKey(right) && isGrounded == true)
+
+        if (Input.GetKey(right))
         {
             rb2d.AddForce(Vector3.right * force * Time.deltaTime);
         }
-        if (Input.GetKey(left) && isGrounded == true)
+        if (Input.GetKey(left))
         {
             rb2d.AddForce(Vector3.left * force * Time.deltaTime);
         }
@@ -64,11 +63,13 @@ public class movement : MonoBehaviour
         {
             
             rb2d.mass = 3;
+            rb2d.drag = 2;
 
         }
         else
         {
             rb2d.mass = 5;
+            rb2d.drag = 1;
 
         }
 
