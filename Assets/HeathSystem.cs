@@ -42,5 +42,12 @@ public class HeathSystem : MonoBehaviour
             health = health-20;
 
         }
+        if (collision.gameObject.tag == "healing powerup")
+        {
+
+            health = health +50;
+
+            Destroy(GameObject.FindWithTag("healing powerup"));
+        }
     }
 }

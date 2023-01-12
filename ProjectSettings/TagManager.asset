@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Powerup
   - New tag
+  - healing powerup
   layers:
   - Default
   - TransparentFX
