@@ -74,6 +74,7 @@ public class movement : MonoBehaviour
 
         }
 
+
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
