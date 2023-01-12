@@ -5,15 +5,15 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     public KeyCode attack;
-    public bool enemyHitbox; 
+    public bool enemyHitbox;
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Input.GetKey(attack))
+        
+        if (collision.gameObject.tag == "Enemy")
         {
-            if (collision.gameObject.tag == "Enemy")
+            if (Input.GetKey(attack))
             {
-                Destroy(collision.gameObject);
-
+                    Destroy(collision.gameObject);
             }
         }
        
@@ -27,4 +27,5 @@ public class Attack : MonoBehaviour
             enemyHitbox = false;
         }
     }
+
 }
