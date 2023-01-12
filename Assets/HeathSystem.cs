@@ -15,13 +15,14 @@ public class HeathSystem : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if (health<=0)
+    {  
+        if (health<=0) //om livet tar slut så händer x - Jack
         {
+
         }
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision) // om player rör vatten så tp till spawn
     {
         if (collision.gameObject.tag == "water")
         {
