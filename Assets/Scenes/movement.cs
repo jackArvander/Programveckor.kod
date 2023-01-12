@@ -11,24 +11,24 @@ public class movement : MonoBehaviour
     public KeyCode right;
     public KeyCode left;
     public KeyCode jump;
-    public KeyCode bigJump;
+    public KeyCode superJump;
     public KeyCode slam;
     public KeyCode reset;
     public int Keys;
     public float force;
     public float jumpForce;
-    public float bigJumpForce;
+    public float superjumpForce;
     public float slamForce;
     public bool isGrounded;
     public bool isSlamming;
-
+    public bool powerup;
 
 
 
     void Update()
     {
 
-
+        // Makes the character move - Alexander
         if (Input.GetKey(right))
         {
             rb2d.AddForce(Vector3.right * force * Time.deltaTime);
@@ -42,19 +42,20 @@ public class movement : MonoBehaviour
             rb2d.AddForce(Vector3.down * slamForce);
             isSlamming = true;
         }
-        if (Input.GetKeyDown(jump) && isGrounded == true && !Input.GetKey(bigJump))
+        if (Input.GetKeyDown(jump) && isGrounded == true)
         {
-            rb2d.AddForce(Vector3.up * jumpForce);
-            isGrounded = false;
-        }
-        if (Input.GetKey(bigJump) && isGrounded == true)
-        {
-            if (Input.GetKeyDown(jump) && isGrounded == true)
+            if (powerup == true)
             {
-                rb2d.AddForce(Vector3.up * jumpForce * bigJumpForce);
+                rb2d.AddForce(Vector3.up * jumpForce * superjumpForce);
+                isGrounded = false;
+            }
+            else
+            {
+                rb2d.AddForce(Vector3.up * jumpForce);
                 isGrounded = false;
             }
         }
+
         if (Input.GetKeyDown(reset))
         {
             transform.position = new Vector3(-37, -4, -8);
@@ -85,7 +86,13 @@ public class movement : MonoBehaviour
             isSlamming = false;
 
         }
+        if (collision.gameObject.tag == "Powerup")
+        {
+            powerup = true;
+            Destroy(collision.gameObject);
 
+        }
 
     }
+
 }
