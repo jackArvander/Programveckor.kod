@@ -42,13 +42,7 @@ public class EnemyBehavior : MonoBehaviour
             }
         }
     }
-    public void OnCollisionEnter2D(Collision2D trigger)
-    {
-        if (trigger.gameObject.tag == "water")
-        {
-            transform.position = new Vector3(-37, -4, -8);
-        }
-    }
+
 
 
 }

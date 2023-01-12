@@ -22,6 +22,7 @@ public class movement : MonoBehaviour
     public bool isGrounded;
     public bool isSlamming;
     public bool powerup;
+    float timer;
 
 
 
@@ -32,10 +33,14 @@ public class movement : MonoBehaviour
         if (Input.GetKey(right))
         {
             rb2d.AddForce(Vector3.right * force * Time.deltaTime);
+            transform.localScale = new Vector3(-1, 1, 1);
+
         }
         if (Input.GetKey(left))
         {
             rb2d.AddForce(Vector3.left * force * Time.deltaTime);
+            transform.localScale = new Vector3(1, 1, 1);
+
         }
         if (Input.GetKeyDown(slam) && isSlamming == false && isGrounded == false)
         {
@@ -74,6 +79,12 @@ public class movement : MonoBehaviour
 
         }
 
+        timer += Time.deltaTime;
+
+        if (timer > 10)
+        {
+            powerup = false;
+        }
 
     }
 
@@ -91,6 +102,8 @@ public class movement : MonoBehaviour
         {
             powerup = true;
             Destroy(collision.gameObject);
+            timer = 0;
+
 
         }
 
