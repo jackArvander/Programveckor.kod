@@ -23,9 +23,7 @@ public class movement : MonoBehaviour
     public bool isSlamming;
     public bool powerup;
     float timer;
-    public GameObject attackPoint;
-    public float radius;
-    public LayerMask enemies;
+
 
 
     void Update()
@@ -56,7 +54,7 @@ public class movement : MonoBehaviour
                 rb2d.AddForce(Vector3.up * jumpForce * superjumpForce);
                 isGrounded = false;
             }
-            else
+            if (powerup == false)
             {
                 rb2d.AddForce(Vector3.up * jumpForce);
                 isGrounded = false;
@@ -89,20 +87,7 @@ public class movement : MonoBehaviour
         }
 
     }
-    public void attacker()
-    {
-        Collider2D[] enemy = Physics2D.OverlapCircleAll(attackPoint.transform.position, radius, enemies);
-        foreach (Collider2D enemyGameobject in enemy)
-        {
-            Debug.Log("hit enemy");
-
-        }       
-    }
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(attackPoint.transform.position, radius);
-    }
-
+   
     public void OnCollisionEnter2D(Collision2D collision)
     {
 
@@ -115,6 +100,7 @@ public class movement : MonoBehaviour
         }
         if (collision.gameObject.tag == "Powerup")
         {
+            isGrounded = true;
             powerup = true;
             Destroy(collision.gameObject);
             timer = 0;
