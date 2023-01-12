@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6102140111246182292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.02, y: 0, z: 0}
-  m_LocalScale: {x: 9.602051, y: 2.156305, z: 1}
+  m_LocalPosition: {x: -2.11, y: -0.2, z: 0}
+  m_LocalScale: {x: 1.3022782, y: 3.935257, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6102140111977047479}
@@ -221,11 +221,6 @@ MonoBehaviour:
   isGrounded: 0
   isSlamming: 0
   powerup: 0
-  attackPoint: {fileID: 6102140111774113499}
-  radius: 2
-  enemies:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!50 &6102140111977047482
 Rigidbody2D:
   serializedVersion: 4
