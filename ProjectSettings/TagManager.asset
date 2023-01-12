@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - water
   - Enemy
+  - Powerup
+  - New tag
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 
