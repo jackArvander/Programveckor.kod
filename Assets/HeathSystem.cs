@@ -23,23 +23,21 @@ public class HeathSystem : MonoBehaviour
             health= 100;
         }
 
-        
-
     }
 
-    public void OnTriggerEnter2D(Collider2D collision) // om player rör vatten så dör man
+    public void OnTriggerEnter2D(Collider2D collision) 
     {
-        if (collision.gameObject.tag == "water")
+        if (collision.gameObject.tag == "water") //rör man vatten dör man direkt
         {
 
             health = 0;
 
         }
 
-        if (collision.gameObject.tag == "em")
+        if (collision.gameObject.tag == "Enemy") // man tar -20 liv för varje collision med enemy
         {
 
-            health = 0;
+            health = health - 20;
 
         }
     }
