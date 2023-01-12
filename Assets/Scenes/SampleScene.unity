@@ -1820,6 +1820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Remy
       objectReference: {fileID: 0}
+    - target: {fileID: 7957866907443219932, guid: 4a969f3428e3ba14f844bd91b96ebd08, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7957866907443219933, guid: 4a969f3428e3ba14f844bd91b96ebd08, type: 3}
       propertyPath: m_Mass
       value: 5
@@ -1891,7 +1895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2919044465386204442, guid: 96a9942d89e41ca4594485e8686ec964, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: water
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96a9942d89e41ca4594485e8686ec964, type: 3}
