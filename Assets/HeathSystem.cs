@@ -16,20 +16,31 @@ public class HeathSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {  
-        if (health<=0) //om livet tar slut så händer x - Jack
+        if (health<=0) //När livet når <=0 så förstörs Taggen player - Jack
         {
-
+            //Destroy(GameObject.FindWithTag("player"));
+            transform.position = new Vector3(-37, -4, -8);
+            health= 100;
         }
+
+        
+
     }
 
-    public void OnTriggerEnter2D(Collider2D collision) // om player rör vatten så tp till spawn
+    public void OnTriggerEnter2D(Collider2D collision) // om player rör vatten så dör man
     {
         if (collision.gameObject.tag == "water")
         {
 
-            transform.position = new Vector3(-37, -4, -8);
+            health = 0;
 
         }
 
+        if (collision.gameObject.tag == "em")
+        {
+
+            health = 0;
+
+        }
     }
 }
