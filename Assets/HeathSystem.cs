@@ -36,10 +36,10 @@ public class HeathSystem : MonoBehaviour
 
         }
 
-        if (collision.gameObject.tag == "em")
+        if (collision.gameObject.tag == "Enemy")
         {
 
-            health = 0;
+            health = health-20;
 
         }
     }
