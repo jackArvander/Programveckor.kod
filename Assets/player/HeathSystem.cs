@@ -6,6 +6,8 @@ public class HeathSystem : MonoBehaviour
 {
     public float health = 100;
     [SerializeField] Healthbar _healthbar;
+    public Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
@@ -20,11 +22,12 @@ public class HeathSystem : MonoBehaviour
         {
             //Destroy(GameObject.FindWithTag("player"));
             transform.position = new Vector3(-37, -4, -8);
-            health= 100;
+            health = 100;
+            animator.SetTrigger("Die");
 
         }
 
-        
+
 
     }
 
