@@ -97,13 +97,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3731101211656774423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aabc7f8ee1c394045b42fb026c6a545a, type: 3}
+  m_Script: {fileID: 11500000, guid: c4828ad0aa171bb4da694e73eb43de57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPos1: {x: -98, y: -7, z: 0}
-  targetPos2: {x: -80, y: -7, z: 0}
-  speed: 5
-  canMove: 1
+  targetPos1: {x: 0, y: 0, z: 0}
+  targetPos2: {x: 0, y: 0, z: 0}
+  speed: 1
+  canMove: 0
   firstMove: 0
 --- !u!61 &3731101211656774416
 BoxCollider2D:
@@ -115,7 +115,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -161,6 +161,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3731101211656774423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85fb982d8e920d140b162f046990cb19, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b9a48ca0de94294fa7a28dcb7a7c07b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
