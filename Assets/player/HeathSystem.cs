@@ -34,12 +34,7 @@ public class HeathSystem : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
 
     {
-        if (collision.gameObject.tag == "water")
-        {
 
-            health = 0;
-
-        }
 
         if (collision.gameObject.tag == "Enemy")
         {
@@ -55,4 +50,14 @@ public class HeathSystem : MonoBehaviour
             Destroy(GameObject.FindWithTag("healing powerup"));
         }
     }
+    public void OnTriggerEnter2D(UnityEngine.Collider2D collision)
+    {
+        if (collision.gameObject.tag == "water")
+        {
+
+            health = 0;
+
+        }
+    }
+
 }

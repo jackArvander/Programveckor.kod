@@ -10,13 +10,22 @@ public class Attack : MonoBehaviour
     public int attackDamage = 40;
     public LayerMask enemyLayer;
     public Animator animator;
+    public float attackRate = 2f;
+    float nextAttackTime = 0f;
+    float timer;
     void Update()
     {
-        
-        if (Input.GetKeyDown(punch))
+        timer += Time.deltaTime;
+
+        if (Time.time >= nextAttackTime)
         {
-            attack();
+            if (Input.GetKeyDown(punch))
+            {
+                attack();
+                nextAttackTime = Time.time + 1f / attackRate; 
+            }
         }
+        
     }
     void attack()
     {
