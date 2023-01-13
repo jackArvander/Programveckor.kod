@@ -21,13 +21,15 @@ public class HeathSystem : MonoBehaviour
             //Destroy(GameObject.FindWithTag("player"));
             transform.position = new Vector3(-37, -4, -8);
             health= 100;
+
         }
 
         
 
     }
 
-    public void OnTriggerEnter2D(Collider2D collision) // om player rör vatten så dör man
+    public void OnCollisionEnter2D(Collision2D collision)
+
     {
         if (collision.gameObject.tag == "water")
         {
