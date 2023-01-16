@@ -42,7 +42,12 @@ public class EnemyBehavior : MonoBehaviour
             }
         }
     }
-
+   
 
 
 }
+
+
+
+
+
