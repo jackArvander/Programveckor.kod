@@ -26,7 +26,6 @@ public class EnemyMelee : MonoBehaviour
     }
     void attack()
     {
-        //animator.SetTrigger("Attack");
         Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer);
         foreach (Collider2D player in hitPlayer)
         {
