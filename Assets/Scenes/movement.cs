@@ -30,16 +30,16 @@ public class movement : MonoBehaviour
     {
 
         // Makes the character move - Alexander
-        if (Input.GetKey(right))
-        {
-            rb2d.AddForce(Vector3.right * force * Time.deltaTime);
-            transform.localScale = new Vector3(-1, 1, 1);
-
-        }
         if (Input.GetKey(left))
         {
             rb2d.AddForce(Vector3.left * force * Time.deltaTime);
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(-10, 10, 10);
+
+        }
+        if (Input.GetKey(right))
+        {
+            rb2d.AddForce(Vector3.right * force * Time.deltaTime);
+            transform.localScale = new Vector3(10, 10, 10);
 
         }
         if (Input.GetKeyDown(slam) && isSlamming == false && isGrounded == false)
