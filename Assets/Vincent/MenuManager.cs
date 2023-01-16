@@ -76,7 +76,14 @@ public class MenuManager : MonoBehaviour
     public void PlayGame()
     {
 
-        SceneManager.LoadScene("Test");
+        SceneManager.LoadScene("Level1");
+
+    }
+
+    public void Restart()
+    {
+
+        transform.position = new Vector3(0, 0, 0) * Time.deltaTime;
 
     }
 
