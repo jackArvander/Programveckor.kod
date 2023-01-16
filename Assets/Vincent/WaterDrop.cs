@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Timer : MonoBehaviour
+public class WaterDrop : MonoBehaviour
 {
 
     public GameObject objectToDisable;
@@ -14,8 +14,13 @@ public class Timer : MonoBehaviour
 
     IEnumerator EnableAfterTime()
     {
-        objectToDisable.SetActive(false);
-        yield return new WaitForSeconds(timer);
-        objectToDisable.SetActive(true);
+        while (true)
+        {
+            objectToDisable.SetActive(false);
+            yield return new WaitForSeconds(timer);
+            objectToDisable.SetActive(true);
+            yield return new WaitForSeconds(timer);
+        }
     }
+
 }
