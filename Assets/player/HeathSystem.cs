@@ -4,42 +4,48 @@ using UnityEngine;
 
 public class HeathSystem : MonoBehaviour
 {
-    private float health = 100;
+    public float health = 100;
+    public float currentHealth;
     [SerializeField] Healthbar _healthbar;
+    public Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
     {
-       
-    }
+        currentHealth = health;
 
+    }
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+
+    }
     // Update is called once per frame
     void Update()
     {  
-        if (health<=0) //När livet når <=0 så förstörs Taggen player - Jack
+        if (currentHealth<=0) //När livet når <=0 så förstörs Taggen player - Jack
         {
             //Destroy(GameObject.FindWithTag("player"));
             transform.position = new Vector3(-37, -4, -8);
-            health= 100;
+            currentHealth = health;
+            animator.SetTrigger("Die");
+
         }
 
-        
+
 
     }
 
-    public void OnTriggerEnter2D(Collider2D collision) // om player rör vatten så dör man
+    public void OnCollisionEnter2D(Collision2D collision)
+
     {
-        if (collision.gameObject.tag == "water")
-        {
 
-            health = 0;
-
-        }
 
         if (collision.gameObject.tag == "Enemy")
         {
 
-            health = health-20;
+            currentHealth = currentHealth - 20;
 
         }
         if (collision.gameObject.tag == "healing powerup")
@@ -50,4 +56,14 @@ public class HeathSystem : MonoBehaviour
             Destroy(GameObject.FindWithTag("healing powerup"));
         }
     }
+    public void OnTriggerEnter2D(UnityEngine.Collider2D collision)
+    {
+        if (collision.gameObject.tag == "water")
+        {
+
+            health = 0;
+
+        }
+    }
+
 }

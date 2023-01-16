@@ -4,15 +4,42 @@ using UnityEngine;
 
 public class EnemyMelee : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    public Transform attackPoint;
+    public float attackRange = 0.5f;
+    public int attackDamage = 40;
+    public LayerMask playerLayer;
+    public Animator animator;
+    public float timer;
+    //public Animator animator;
     void Update()
     {
-        
+
+        timer += Time.deltaTime;
+        if (timer >= 3)
+        {
+            animator.SetTrigger("attack");
+            attack();
+            timer = 0;
+        }
+
+
+    }
+    void attack()
+    {
+        //animator.SetTrigger("Attack");
+        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer);
+        foreach (Collider2D player in hitPlayer)
+        {
+            player.GetComponent<HeathSystem>().TakeDamage(attackDamage);
+        }
+
+    }
+    void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+        {
+            return;
+        }
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }

@@ -18,6 +18,9 @@ public class Healthbar : MonoBehaviour
     }
     public void SetHealth(int Health)
     {
+        GetComponent<HeathSystem>();
         _HealthSlider.value = Health;
+
     }
+    
 }
