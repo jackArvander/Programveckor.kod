@@ -8,6 +8,7 @@ public class reset : MonoBehaviour
    
 
     public KeyCode reeet;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,8 @@ public class reset : MonoBehaviour
         if (Input.GetKeyDown(reeet))
         {
             transform.position = new Vector3(-5, -3, -8);
+            animator.SetBool("Die", false);
+
         }
     }
 }

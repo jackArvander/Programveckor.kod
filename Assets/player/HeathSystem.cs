@@ -8,6 +8,8 @@ public class HeathSystem : MonoBehaviour
     public float currentHealth;
     [SerializeField] Healthbar _healthbar;
     public Animator animator;
+    public KeyCode reeet;
+
 
 
     // Start is called before the first frame update
@@ -19,6 +21,7 @@ public class HeathSystem : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        animator.SetTrigger("Hurt");
 
     }
     // Update is called once per frame
@@ -27,12 +30,17 @@ public class HeathSystem : MonoBehaviour
         if (currentHealth<=0) //När livet når <=0 så förstörs Taggen player - Jack
         {
             //Destroy(GameObject.FindWithTag("player"));
-            transform.position = new Vector3(-37, -4, -8);
-            currentHealth = health;
-            animator.SetTrigger("Die");
+           // transform.position = new Vector3(-37, -4, -8);
+            // currentHealth = health;
+            animator.SetBool("Die", true);
 
         }
+        if(Input.GetKeyDown(reeet))
+        {
+            transform.position = new Vector3(-5, -3, -8);
+            animator.SetBool("Die", false);
 
+        }
 
 
     }

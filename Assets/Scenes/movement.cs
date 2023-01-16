@@ -23,6 +23,8 @@ public class movement : MonoBehaviour
     public bool isSlamming;
     public bool powerup;
     float timer;
+    public Animator animator;
+
 
 
 
@@ -35,12 +37,20 @@ public class movement : MonoBehaviour
             rb2d.AddForce(Vector3.left * force * Time.deltaTime);
             transform.localScale = new Vector3(-10, 10, 10);
 
+            animator.SetFloat("Speed", 1);
+
         }
-        if (Input.GetKey(right))
+        else if (Input.GetKey(right))
         {
             rb2d.AddForce(Vector3.right * force * Time.deltaTime);
             transform.localScale = new Vector3(10, 10, 10);
+            animator.SetFloat("Speed", 1);
 
+
+        }
+        else
+        {
+            animator.SetFloat("Speed", 0);
         }
         if (Input.GetKeyDown(slam) && isSlamming == false && isGrounded == false)
         {
@@ -70,13 +80,16 @@ public class movement : MonoBehaviour
             
             rb2d.mass = 3;
             rb2d.drag = 2;
+            animator.SetBool("Begin JUMP", false);
+
 
         }
         else
         {
             rb2d.mass = 5;
             rb2d.drag = 1;
-
+            animator.SetBool("Begin JUMP", true);
+            
         }
 
         timer += Time.deltaTime;
