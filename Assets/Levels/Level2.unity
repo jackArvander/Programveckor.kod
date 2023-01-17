@@ -2036,9 +2036,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ratte(player) 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5128484457175538140, guid: 4fad553d026bdaa4ea1ba50c6e6492f7, type: 3}
+      propertyPath: m_Size.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128484457175538140, guid: 4fad553d026bdaa4ea1ba50c6e6492f7, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 8343139614780639470, guid: 4fad553d026bdaa4ea1ba50c6e6492f7, type: 3}
       propertyPath: force
-      value: 1000
+      value: 3450
       objectReference: {fileID: 0}
     - target: {fileID: 8343139614780639470, guid: 4fad553d026bdaa4ea1ba50c6e6492f7, type: 3}
       propertyPath: jumpForce
@@ -2050,23 +2058,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8484800868803747667, guid: 4fad553d026bdaa4ea1ba50c6e6492f7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8484800868803747667, guid: 4fad553d026bdaa4ea1ba50c6e6492f7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8484800868803747667, guid: 4fad553d026bdaa4ea1ba50c6e6492f7, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8484800868803747667, guid: 4fad553d026bdaa4ea1ba50c6e6492f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.77
+      value: -14.468
       objectReference: {fileID: 0}
     - target: {fileID: 8484800868803747667, guid: 4fad553d026bdaa4ea1ba50c6e6492f7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6
+      value: 0.314
       objectReference: {fileID: 0}
     - target: {fileID: 8484800868803747667, guid: 4fad553d026bdaa4ea1ba50c6e6492f7, type: 3}
       propertyPath: m_LocalPosition.z
