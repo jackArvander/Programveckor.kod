@@ -35,7 +35,7 @@ public class movement : MonoBehaviour
         if (Input.GetKey(left))
         {
             rb2d.AddForce(Vector3.left * force * Time.deltaTime);
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-2, 2, 2);
 
             animator.SetFloat("Speed", 1);
 
@@ -43,7 +43,7 @@ public class movement : MonoBehaviour
         else if (Input.GetKey(right))
         {
             rb2d.AddForce(Vector3.right * force * Time.deltaTime);
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(2, 2, 2);
             animator.SetFloat("Speed", 1);
 
 
