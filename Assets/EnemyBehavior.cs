@@ -12,11 +12,15 @@ public class EnemyBehavior : MonoBehaviour
     public float speed = 1f;
     public bool canMove;
     public bool firstMove;
+    float previousHorizontalDirection;
+    private SpriteRenderer enemySpriteRenderer;
+    private Rigidbody2D enemyRigidbody2D;
 
     // Start is called before the first frame update
     void Start()
     {
         firstMove = true;
+       
     }
 
     // Update is called once per frame
@@ -34,18 +38,28 @@ public class EnemyBehavior : MonoBehaviour
         {
             if (firstMove)
             {
-                transform.position = Vector3.MoveTowards(transform.position, targetPos1, speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, targetPos1, speed * Time.deltaTime);
             }
             else
             {
-                transform.position = Vector3.MoveTowards(transform.position, targetPos2, speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, targetPos2, speed * Time.deltaTime);
             }
         }
+
+       
+
     }
+
+
+    
+}
+    
+
+
    
 
 
-}
+
 
 
 
