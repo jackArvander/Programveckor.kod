@@ -12,7 +12,6 @@ public class EnemyBehavior : MonoBehaviour
     public float speed = 1f;
     public bool canMove;
     public bool firstMove;
-    float previousHorizontalDirection;
     private SpriteRenderer enemySpriteRenderer;
     private Rigidbody2D enemyRigidbody2D;
 
@@ -20,7 +19,8 @@ public class EnemyBehavior : MonoBehaviour
     void Start()
     {
         firstMove = true;
-       
+        enemySpriteRenderer = GetComponent<SpriteRenderer>();
+        enemyRigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -29,10 +29,12 @@ public class EnemyBehavior : MonoBehaviour
         if (transform.position == targetPos1)
         {
             firstMove = false;
+            enemySpriteRenderer.flipX = true;
         }
-        if (transform.position == targetPos2)
+        else if (transform.position == targetPos2)
         {
             firstMove = true;
+            enemySpriteRenderer.flipX = false;
         }
         if (canMove) // Om den kan röra sig rör den sig till punkt A, när på A gå till B - Jack
         {
@@ -43,25 +45,13 @@ public class EnemyBehavior : MonoBehaviour
             else
             {
                 transform.position = Vector2.MoveTowards(transform.position, targetPos2, speed * Time.deltaTime);
+                if (transform.position == targetPos2)
+                {
+                    firstMove = true;
+                }
             }
         }
-
-       
-
     }
-
-
-    
 }
-    
-
-
-   
-
-
-
-
-
-
-
+            
 
