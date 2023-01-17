@@ -65,12 +65,7 @@ public class HeathSystem : MonoBehaviour
 
         }
 
-        if (collision.gameObject.tag == "Enemy")
-        {
 
-            currentHealth = currentHealth - 20;
-
-        }
         if (collision.gameObject.tag == "healing powerup")
         {
 
