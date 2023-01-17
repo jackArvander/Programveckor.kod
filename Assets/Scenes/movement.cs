@@ -88,8 +88,8 @@ public class movement : MonoBehaviour
         }
         else
         {
-            rb2d.mass = 3;
-            rb2d.drag = 6;
+            rb2d.mass = 5;
+            rb2d.drag = 1;
             
         }
 
