@@ -144,7 +144,7 @@ MonoBehaviour:
   Keys: 0
   force: 5000
   jumpForce: 7000
-  superjumpForce: 0
+  superjumpForce: 1.1
   slamForce: 0
   isGrounded: 0
   isSlamming: 0

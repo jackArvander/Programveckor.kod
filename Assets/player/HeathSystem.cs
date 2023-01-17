@@ -50,6 +50,21 @@ public class HeathSystem : MonoBehaviour
     {
 
 
+        if (collision.gameObject.tag == "water")
+        {
+
+            currentHealth = 0;
+
+            animator.SetTrigger("TouchWater");
+
+        }
+        if (collision.gameObject.tag == "water" && currentHealth <= 0)
+        {
+
+            animator.SetBool("DieWater", true);
+
+        }
+
         if (collision.gameObject.tag == "Enemy")
         {
 
@@ -69,7 +84,15 @@ public class HeathSystem : MonoBehaviour
         if (collision.gameObject.tag == "water")
         {
 
-            health = 0;
+            currentHealth = 0;
+
+            animator.SetTrigger("TouchWater");
+
+        }
+        if (collision.gameObject.tag == "water" && currentHealth <= 0)
+        {
+
+            animator.SetBool("DieWater", true);
 
         }
     }

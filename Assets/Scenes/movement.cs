@@ -59,6 +59,8 @@ public class movement : MonoBehaviour
         }
         if (Input.GetKeyDown(jump) && isGrounded == true)
         {
+            animator.SetBool("IsAired", true);
+
             if (powerup == true)
             {
                 rb2d.AddForce(Vector3.up * jumpForce * superjumpForce);
@@ -80,7 +82,7 @@ public class movement : MonoBehaviour
             
             rb2d.mass = 3;
             rb2d.drag = 2;
-            animator.SetBool("Begin JUMP", false);
+            animator.SetBool("IsAired", false);
 
 
         }
@@ -88,7 +90,6 @@ public class movement : MonoBehaviour
         {
             rb2d.mass = 5;
             rb2d.drag = 1;
-            animator.SetBool("Begin JUMP", true);
             
         }
 

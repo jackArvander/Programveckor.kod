@@ -21,8 +21,9 @@ public class reset : MonoBehaviour
     {
         if (Input.GetKeyDown(reeet))
         {
-            transform.position = new Vector3(-5, -3, -8);
+            transform.position = new Vector3(-56, 2, 8);
             animator.SetBool("Die", false);
+            animator.SetBool("WaterDie", false);
 
         }
     }

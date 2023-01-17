@@ -24,7 +24,6 @@ public class Enemy_Health : MonoBehaviour
     }
     void die()
     {
-        Debug.Log("Enemy ded");
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
         Destroy(this.gameObject);
