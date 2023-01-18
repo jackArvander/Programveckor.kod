@@ -30,7 +30,7 @@ public class HeathSystem : MonoBehaviour
         if (currentHealth<=0) //När livet når <=0 så förstörs Taggen player - Jack
         {
             //Destroy(GameObject.FindWithTag("player"));
-           // transform.position = new Vector3(-37, -4, -8);
+            // transform.position = new Vector3(-37, -4, -8);
             // currentHealth = health;
             animator.SetBool("Die", true);
 
