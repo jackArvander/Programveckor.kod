@@ -12,6 +12,7 @@ TagManager:
   - healing powerup
   - Lava
   - GM
+  - Cheese
   layers:
   - Default
   - TransparentFX

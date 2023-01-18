@@ -62,7 +62,7 @@ public class MenuManager : MonoBehaviour
     {
 
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("MainMenu");
 
     }
 
@@ -83,7 +83,7 @@ public class MenuManager : MonoBehaviour
     public void Restart()
     {
 
-        transform.position = new Vector3(0, 0, 0) * Time.deltaTime;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
 
@@ -91,6 +91,13 @@ public class MenuManager : MonoBehaviour
     {
 
         SceneManager.LoadScene("Credits");
+
+    }
+
+    public void Continue()
+    {
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
 }
