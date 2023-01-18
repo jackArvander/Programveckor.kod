@@ -16,6 +16,7 @@ public class HeathSystem : MonoBehaviour
     void Start()
     {
         currentHealth = health;
+        Rigidbody rigidbody = GetComponent<Rigidbody>();
 
     }
     public void TakeDamage(int damage)
@@ -27,15 +28,18 @@ public class HeathSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {  
-        if (currentHealth<=0) //När livet når <=0 så förstörs Taggen player - Jack
+        if (currentHealth<=0) //Nï¿½r livet nï¿½r <=0 sï¿½ fï¿½rstï¿½rs Taggen player - Jack
         {
-            //Destroy(GameObject.FindWithTag("player"));
-            // transform.position = new Vector3(-37, -4, -8);
-            // currentHealth = health;
+
             animator.SetBool("Die", true);
+            GameObject.Find("Ratte(player) 1").GetComponent<movement>().enabled = false;
+            GameObject.Find("Ratte(player) 1").GetComponent<Attack>().enabled = false;
+            this.enabled = false;
+            Destroy(GetComponent<Rigidbody2D>());
+
 
         }
-        if(Input.GetKeyDown(reeet))
+        if (Input.GetKeyDown(reeet))
         {
             transform.position = new Vector3(-5, -3, -8);
             animator.SetBool("Die", false);
@@ -68,15 +72,15 @@ public class HeathSystem : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
 
-            currentHealth = currentHealth - 20;
+            currentHealth -= 20;
 
         }
         if (collision.gameObject.tag == "healing powerup")
         {
+            Destroy(collision.gameObject);
+            currentHealth = 100;
 
-            health = health +50;
 
-            Destroy(GameObject.FindWithTag("healing powerup"));
         }
     }
     public void OnTriggerEnter2D(UnityEngine.Collider2D collision)

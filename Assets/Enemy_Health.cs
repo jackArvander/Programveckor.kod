@@ -7,7 +7,7 @@ public class Enemy_Health : MonoBehaviour
     public int maxHealth = 100;
     int currentHealth;
     public Animator animator;
-    public float timer =1.5f;
+    public float timer =1.6f;
 
 
     // Start is called before the first frame update
@@ -40,7 +40,8 @@ public class Enemy_Health : MonoBehaviour
     {
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
-        Destroy(this.gameObject);
+        timer = 0;
+        //Destroy(this.gameObject);
 
     }
 
