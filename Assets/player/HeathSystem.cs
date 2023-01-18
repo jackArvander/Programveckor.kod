@@ -43,6 +43,7 @@ public class HeathSystem : MonoBehaviour
             Destroy(GetComponent<Rigidbody2D>());
 
             isDeath = true;
+            AudioManager.Instance.PlaySFX("Defeat");
 
 
         }

@@ -61,6 +61,7 @@ public class movement : MonoBehaviour
         {
             animator.SetBool("IsAired", true);
             animator.SetTrigger("Begin Jump");
+            AudioManager.Instance.PlaySFX("Jump");
 
             if (powerup == true)
             {

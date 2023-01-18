@@ -21,6 +21,8 @@ public class Attack : MonoBehaviour
             {
                 attack();
               timer = 0;
+
+            AudioManager.Instance.PlaySFX("Hit");
             }
         
         

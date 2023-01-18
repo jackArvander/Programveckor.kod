@@ -37,7 +37,11 @@ public class CheeseTouch : MonoBehaviour
 
             isWon = true;
 
+            AudioManager.Instance.PlaySFX("Victory");
+
         }
+
+        
 
     }
 
