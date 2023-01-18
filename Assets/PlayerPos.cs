@@ -19,7 +19,7 @@ public class PlayerPos : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.RightShift))
         {
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
