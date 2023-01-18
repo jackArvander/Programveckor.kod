@@ -5733,6 +5733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followTransform: {fileID: 173613107}
+  smoothSpeed: 0.125
 --- !u!1 &1534183048
 GameObject:
   m_ObjectHideFlags: 0
@@ -7350,7 +7351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1940419574
 Transform:
   m_ObjectHideFlags: 0
@@ -7768,6 +7769,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2549642703796913471, guid: 4fad553d026bdaa4ea1ba50c6e6492f7, type: 3}
+      propertyPath: loseMenu
+      value: 
+      objectReference: {fileID: 1123685809}
     - target: {fileID: 3302056976262241959, guid: 4fad553d026bdaa4ea1ba50c6e6492f7, type: 3}
       propertyPath: m_Name
       value: Ratte(player) 1
