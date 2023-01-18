@@ -2754,7 +2754,7 @@ GameObject:
   - component: {fileID: 1554832459}
   - component: {fileID: 1554832458}
   m_Layer: 0
-  m_Name: frame_00_delay-0.2s
+  m_Name: SinkBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3205,7 +3205,6 @@ GameObject:
   - component: {fileID: 2052675190}
   - component: {fileID: 2052675189}
   - component: {fileID: 2052675188}
-  - component: {fileID: 2052675191}
   m_Layer: 0
   m_Name: Sinking HitBox
   m_TagString: Ground
@@ -3225,13 +3224,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d41f41b0c466d1346ba8c02b294bb7e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPos1: {x: 0.004, y: -1.2, z: 0}
-  targetPos2: {x: 0.004, y: -0.62, z: 0}
+  targetPos1: {x: -9.763437, y: -1.2, z: 0}
+  targetPos2: {x: -9.763437, y: -0.62, z: 0}
   speed: 1
   canMove: 1
   firstMove: 0
   sinking: 0
-  animator: {fileID: 2052675191}
 --- !u!61 &2052675189
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3273,26 +3271,6 @@ Transform:
   m_Father: {fileID: 1554832460}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &2052675191
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052675187}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9087be8bc8ec4434cbb59bdc85393712, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2099666387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3300,6 +3278,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2549642703796913471, guid: 4fad553d026bdaa4ea1ba50c6e6492f7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3302056976262241959, guid: 4fad553d026bdaa4ea1ba50c6e6492f7, type: 3}
       propertyPath: m_Name
       value: Ratte(player) 1

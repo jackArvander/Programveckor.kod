@@ -14,7 +14,6 @@ public class Sinking_Box : MonoBehaviour
     public bool canMove;
     public bool firstMove;
     public bool sinking;
-    public Animator animator;
 
 
     // Start is called before the first frame update
@@ -34,13 +33,13 @@ public class Sinking_Box : MonoBehaviour
         }
         if (sinking == true)
         {
-            animator.SetBool("IsSinking", true);
+            GameObject.Find("SinkBox").GetComponent<Animator>().Play("Sink");
+
 
             transform.position = Vector2.MoveTowards(transform.position, targetPos1, speed * Time.deltaTime);
         }
         if (sinking == false)
         {
-            animator.SetBool("IsSinking", false);
 
             transform.position = Vector2.MoveTowards(transform.position, targetPos2, speed * Time.deltaTime);
         }
