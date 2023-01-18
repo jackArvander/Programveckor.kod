@@ -41,7 +41,7 @@ public class Sinking_Box : MonoBehaviour
         if (sinking == false)
         {
 
-            transform.position = Vector2.MoveTowards(transform.position, targetPos2, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, targetPos2, 1 * Time.deltaTime);
         }
 
     }

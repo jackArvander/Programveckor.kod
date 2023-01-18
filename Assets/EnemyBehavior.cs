@@ -29,12 +29,12 @@ public class EnemyBehavior : MonoBehaviour
         if (transform.position == targetPos1)
         {
             firstMove = false;
-            enemySpriteRenderer.flipX = true;
+            transform.localScale = new Vector3(-2, 2, 2);
         }
         else if (transform.position == targetPos2)
         {
             firstMove = true;
-            enemySpriteRenderer.flipX = false;
+            transform.localScale = new Vector3(2, 2, 2);
         }
         if (canMove) // Om den kan röra sig rör den sig till punkt A, när på A gå till B - Jack
         {
