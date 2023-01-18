@@ -72,6 +72,9 @@ public class movement : MonoBehaviour
                 rb2d.AddForce(Vector3.up * jumpForce);
                 isGrounded = false;
             }
+
+
+
         }
 
         if (Input.GetKeyDown(reset))
