@@ -7,6 +7,7 @@ public class MenuManager : MonoBehaviour
 {
 
     public GameObject pauseMenu;
+    public GameObject GM;
 
     public bool isPaused;
 
@@ -64,6 +65,7 @@ public class MenuManager : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("Main Menu");
 
+
     }
 
     public void QuitGame()
@@ -87,7 +89,7 @@ public class MenuManager : MonoBehaviour
 
     }
 
-    public void Credits()
+    public async void Credits()
     {
 
         SceneManager.LoadScene("Credits");
@@ -100,4 +102,7 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
+
+
+
 }
