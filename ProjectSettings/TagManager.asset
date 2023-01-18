@@ -11,6 +11,7 @@ TagManager:
   - New tag
   - healing powerup
   - Lava
+  - GM
   layers:
   - Default
   - TransparentFX
