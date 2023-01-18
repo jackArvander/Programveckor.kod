@@ -10,6 +10,9 @@ public class HeathSystem : MonoBehaviour
     public Animator animator;
     public KeyCode reeet;
 
+    public GameObject loseMenu;
+    public bool isDeath = false;
+
 
 
     // Start is called before the first frame update
@@ -17,6 +20,8 @@ public class HeathSystem : MonoBehaviour
     {
         currentHealth = health;
         Rigidbody rigidbody = GetComponent<Rigidbody>();
+
+        loseMenu.SetActive(false);
 
     }
     public void TakeDamage(int damage)
@@ -37,6 +42,8 @@ public class HeathSystem : MonoBehaviour
             this.enabled = false;
             Destroy(GetComponent<Rigidbody2D>());
 
+            isDeath = true;
+
 
         }
         if (Input.GetKeyDown(reeet))
@@ -46,6 +53,21 @@ public class HeathSystem : MonoBehaviour
 
         }
 
+        // när du förlorar
+        if (isDeath == true)
+        {
+
+            defeat();
+
+        }
+
+
+    }
+
+    void defeat()
+    {
+
+        loseMenu.SetActive(true);
 
     }
 
