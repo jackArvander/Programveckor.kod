@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy_Health : MonoBehaviour
 {
     public int maxHealth = 100;
-    int currentHealth;
+    public int currentHealth;
     public Animator animator;
     public float timer =1.6f;
 
@@ -19,7 +19,7 @@ public class Enemy_Health : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer == 1.5)
+        if (timer > 1.4f && timer < 1.49)
         {
             Destroy(this.gameObject);
         }
@@ -29,19 +29,17 @@ public class Enemy_Health : MonoBehaviour
     {
         animator.SetTrigger("Hurt");
         currentHealth -= damage;
-        if (currentHealth < 0)
+        if (currentHealth <= 0)
         {
             animator.SetBool("Dead", true);
-
+            timer = 0f;
             die();
         }
     }
     void die()
     {
-        GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
-        timer = 0;
-        //Destroy(this.gameObject);
+
+
 
     }
 
