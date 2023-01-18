@@ -115,13 +115,13 @@ public class movement : MonoBehaviour
         }
         if (collision.gameObject.tag == "Powerup")
         {
-            isGrounded = true;
             powerup = true;
             Destroy(collision.gameObject);
             timer = 0;
 
 
         }
+
 
     }
 
