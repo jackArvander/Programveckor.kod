@@ -634,22 +634,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 189230358, guid: 99d9466c4a2f03345a6182714ac469f4, type: 3}
-      propertyPath: targetPos1.x
-      value: -7.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 189230358, guid: 99d9466c4a2f03345a6182714ac469f4, type: 3}
-      propertyPath: targetPos1.y
-      value: -0.33
-      objectReference: {fileID: 0}
-    - target: {fileID: 189230358, guid: 99d9466c4a2f03345a6182714ac469f4, type: 3}
-      propertyPath: targetPos2.x
-      value: 3.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 189230358, guid: 99d9466c4a2f03345a6182714ac469f4, type: 3}
-      propertyPath: targetPos2.y
-      value: -0.33
-      objectReference: {fileID: 0}
     - target: {fileID: 4341965802991652968, guid: 99d9466c4a2f03345a6182714ac469f4, type: 3}
       propertyPath: m_Name
       value: Enemy Slime
@@ -1736,7 +1720,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winMenu: {fileID: 1940419573}
+  timer: 4
   isWon: 0
+  animator: {fileID: 0}
 --- !u!1 &884547399
 GameObject:
   m_ObjectHideFlags: 0

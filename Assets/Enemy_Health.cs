@@ -33,15 +33,9 @@ public class Enemy_Health : MonoBehaviour
         {
             animator.SetBool("Dead", true);
             timer = 0f;
-            die();
         }
     }
-    void die()
-    {
 
-
-
-    }
 
 
 }

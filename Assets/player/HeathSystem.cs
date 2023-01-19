@@ -9,10 +9,12 @@ public class HeathSystem : MonoBehaviour
     [SerializeField] Healthbar _healthbar;
     public Animator animator;
     public KeyCode reeet;
+    public float timer = 4;
+    public bool neverDone = true;
 
     public GameObject loseMenu;
     public bool isDeath = false;
-
+    public float timerHurt = 1;
 
 
     // Start is called before the first frame update
@@ -22,55 +24,55 @@ public class HeathSystem : MonoBehaviour
         Rigidbody rigidbody = GetComponent<Rigidbody>();
 
         loseMenu.SetActive(false);
-
+        neverDone = true;
     }
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         animator.SetTrigger("Hurt");
 
+
     }
     // Update is called once per frame
     void Update()
-    {  
-        if (currentHealth<=0) //N�r livet n�r <=0 s� f�rst�rs Taggen player - Jack
+    {
+        timerHurt += Time.deltaTime;
+        
+        timer += Time.deltaTime;
+        if (neverDone == true)
         {
+            if (currentHealth <= 0) 
+            {
+                timer = 0;
+                AudioManager.Instance.PlaySFX("Defeat");
+                neverDone = false;
 
+            }
+        }
+        if (currentHealth <= 0)
+        {
             animator.SetBool("Die", true);
             GameObject.Find("Ratte(player) 1").GetComponent<movement>().enabled = false;
             GameObject.Find("Ratte(player) 1").GetComponent<Attack>().enabled = false;
-            this.enabled = false;
             Destroy(GetComponent<Rigidbody2D>());
 
-            isDeath = true;
-            AudioManager.Instance.PlaySFX("Defeat");
-
 
         }
-        if (Input.GetKeyDown(reeet))
-        {
-            transform.position = new Vector3(-5, -3, -8);
-            animator.SetBool("Die", false);
-
-        }
+        
 
         // när du förlorar
-        if (isDeath == true)
-        {
 
-            defeat();
+
+
+        if (timer > 2.4f && timer < 3.49)
+        {
+            loseMenu.SetActive(true);
+
 
         }
-
-
     }
 
-    void defeat()
-    {
 
-        loseMenu.SetActive(true);
-
-    }
 
     public void OnCollisionEnter2D(Collision2D collision)
 
@@ -80,7 +82,7 @@ public class HeathSystem : MonoBehaviour
         if (collision.gameObject.tag == "water")
         {
 
-            currentHealth = 0;
+            currentHealth = -1;
 
             animator.SetTrigger("TouchWater");
 
