@@ -14,7 +14,7 @@ public class HeathSystem : MonoBehaviour
 
     public GameObject loseMenu;
     public bool isDeath = false;
-    public float timerHurt = 1;
+    public float timerHurt = 2;
 
 
     // Start is called before the first frame update
@@ -28,14 +28,21 @@ public class HeathSystem : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+        timerHurt = 0;
         currentHealth -= damage;
-        animator.SetTrigger("Hurt");
+        
 
 
     }
     // Update is called once per frame
     void Update()
     {
+        if (timerHurt > 0.7f && timerHurt < 1)
+
+        {
+            animator.SetTrigger("Hurt");
+
+        }
         timerHurt += Time.deltaTime;
         
         timer += Time.deltaTime;
