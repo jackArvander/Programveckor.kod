@@ -4020,7 +4020,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4341965802991652968, guid: 99d9466c4a2f03345a6182714ac469f4, type: 3}
       propertyPath: m_Name
-      value: Enemy Slime (1)
+      value: w
       objectReference: {fileID: 0}
     - target: {fileID: 4356506434720965033, guid: 99d9466c4a2f03345a6182714ac469f4, type: 3}
       propertyPath: m_RootOrder

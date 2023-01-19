@@ -84,6 +84,12 @@ public class HeathSystem : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
 
     {
+        if (collision.gameObject.tag == "Soda")
+        {
+            Destroy(collision.gameObject);
+            AudioManager.Instance.PlaySFX("Soda");
+
+        }
 
 
         if (collision.gameObject.tag == "water")
