@@ -6,9 +6,10 @@ public class CheeseTouch : MonoBehaviour
 {
 
     public GameObject winMenu;
+    public float timer = 4;
 
     public bool isWon = false;
-
+    public Animator animator;
 
     private void Start()
     {
@@ -19,14 +20,14 @@ public class CheeseTouch : MonoBehaviour
 
     private void Update()
     {
+        timer += Time.deltaTime;
 
-        if (isWon == true)
+
+        if (timer > 2.4f && timer < 2.49)
         {
-
             victory();
-
+            
         }
-        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -34,9 +35,10 @@ public class CheeseTouch : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-
+            Destroy(other.gameObject);
             isWon = true;
-
+            animator.SetBool("Has Won", true);
+            timer = 0;
             AudioManager.Instance.PlaySFX("Victory");
 
         }
@@ -48,8 +50,7 @@ public class CheeseTouch : MonoBehaviour
     void victory()
     {
 
-        winMenu.SetActive(true);
-
+    winMenu.SetActive(true);
     }
 
 }
