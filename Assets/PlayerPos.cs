@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// fick positionen av spelaren till checkpoint (scrapped) - vincent
+
 public class PlayerPos : MonoBehaviour
 {
 
