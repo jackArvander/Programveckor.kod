@@ -15,8 +15,7 @@ public class Sinking_Box : MonoBehaviour
     public bool firstMove;
     public bool sinking;
 
-
-    // Start is called before the first frame update
+    // Gör så att lådan sjunker - Tyler
     void Start()
     {
      
