@@ -10,7 +10,7 @@ public class EnemyMelee : MonoBehaviour
     public LayerMask playerLayer;
     public Animator animator;
     public float timer;
-    //public Animator animator;
+   // Fiendens skada och att den gör animationen i tid - Alexander
     void Update()
     {
 

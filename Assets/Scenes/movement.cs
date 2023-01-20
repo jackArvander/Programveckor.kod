@@ -12,7 +12,6 @@ public class movement : MonoBehaviour
     public KeyCode left;
     public KeyCode jump;
     public KeyCode superJump;
-    public KeyCode slam;
     public KeyCode reset;
     public int Keys;
     public float force;
@@ -20,7 +19,6 @@ public class movement : MonoBehaviour
     public float superjumpForce;
     public float slamForce;
     public bool isGrounded;
-    public bool isSlamming;
     public bool powerup;
     float timer;
     public Animator animator;
@@ -52,11 +50,7 @@ public class movement : MonoBehaviour
         {
             animator.SetFloat("Speed", 0);
         }
-        if (Input.GetKeyDown(slam) && isSlamming == false && isGrounded == false)
-        {
-            rb2d.AddForce(Vector3.down * slamForce);
-            isSlamming = true;
-        }
+        
         if (Input.GetKeyDown(jump) && isGrounded == true)
         {
             animator.SetBool("IsAired", true);
@@ -77,11 +71,8 @@ public class movement : MonoBehaviour
 
 
         }
+        // 
 
-        if (Input.GetKeyDown(reset))
-        {
-            transform.position = new Vector3(-37, -4, -8);
-        }
         if (isGrounded == true)
         {
             
@@ -114,7 +105,6 @@ public class movement : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
-            isSlamming = false;
 
         }
         if (collision.gameObject.tag == "Powerup")

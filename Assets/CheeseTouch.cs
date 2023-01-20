@@ -10,7 +10,7 @@ public class CheeseTouch : MonoBehaviour
 
     public bool isWon = false;
     public Animator animator;
-
+    //Tittar om man rör den vinnande osten - Alexander
     private void Start()
     {
 

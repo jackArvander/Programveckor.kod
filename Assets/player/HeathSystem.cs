@@ -16,8 +16,7 @@ public class HeathSystem : MonoBehaviour
     public bool isDeath = false;
     public float timerHurt = 2;
 
-
-    // Start is called before the first frame update
+    // Hälsa och om man tar skada. - Alexander
     void Start()
     {
         currentHealth = health;
@@ -34,7 +33,6 @@ public class HeathSystem : MonoBehaviour
 
 
     }
-    // Update is called once per frame
     void Update()
     {
         if (timerHurt > 0.7f && timerHurt < 1)
@@ -67,11 +65,10 @@ public class HeathSystem : MonoBehaviour
         }
         
 
-        // när du förlorar
 
+        // Används för att man ska hinna se death animation innan menyn kommer upp -Alexander
 
-
-        if (timer > 2.4f && timer < 3.49)
+        if (timer > 2f && timer < 2.5)
         {
             loseMenu.SetActive(true);
 
@@ -80,7 +77,7 @@ public class HeathSystem : MonoBehaviour
     }
 
 
-
+    // Tittar om man koliderar med massa olika saker. -Alexander
     public void OnCollisionEnter2D(Collision2D collision)
 
     {

@@ -15,8 +15,7 @@ public class Sinking_Box1 : MonoBehaviour
     public bool firstMove;
     public bool sinking;
 
-
-    // Start is called before the first frame update
+    // Ändrar lådans position.... Skriptet är inte så bra :/ - Alexander
     void Start()
     {
      

@@ -11,9 +11,8 @@ public class Enemy_Health : MonoBehaviour
     public float timerHurt = 2;
     public bool neverDone = true;
 
-
-    // Start is called before the first frame update
-    void Start()
+    // Tittar hur mycket fienden tål och hur mycket skada den tar - Alexander
+     void Start()
     {
         currentHealth = maxHealth;
         neverDone = true;

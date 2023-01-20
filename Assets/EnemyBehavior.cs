@@ -15,7 +15,6 @@ public class EnemyBehavior : MonoBehaviour
     private SpriteRenderer enemySpriteRenderer;
     private Rigidbody2D enemyRigidbody2D;
 
-    // Start is called before the first frame update
     void Start()
     {
         firstMove = true;
@@ -23,7 +22,6 @@ public class EnemyBehavior : MonoBehaviour
         enemyRigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (transform.position == targetPos1)

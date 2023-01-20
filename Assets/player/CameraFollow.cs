@@ -6,7 +6,7 @@ public class CameraFollow : MonoBehaviour
 {
     public Transform followTransform;
     public float smoothSpeed = 0.125f;
-
+    //Följer spelaren - Alexander
     void FixedUpdate()
     {
         Vector3 desiredPosition = new Vector3(followTransform.position.x, followTransform.position.y, this.transform.position.z);

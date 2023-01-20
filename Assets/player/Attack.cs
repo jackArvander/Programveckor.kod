@@ -11,7 +11,7 @@ public class Attack : MonoBehaviour
     public LayerMask enemyLayer;
     public Animator animator;
     public float timer;
-
+    // Hur mycket skada playern gör när den skadar - Alexander
     void Update()
     {
 
