@@ -100,7 +100,7 @@ public class movement : MonoBehaviour
 
         timer += Time.deltaTime;
 
-        if (timer > 10)
+        if (timer > 6)
         {
             powerup = false;
         }
