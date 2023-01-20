@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
 {
+   // Fungerar inte - Jack
     public float moveSpeed = 5f;
     Rigidbody2D rb;
     float previousHorizontalInput;
