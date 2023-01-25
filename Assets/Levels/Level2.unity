@@ -1764,7 +1764,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cc358d3bc2d5742b9c3dc50e1511ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
   GM: {fileID: 0}
   isPaused: 0
 --- !u!4 &516596275
@@ -7812,13 +7811,17 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: d6026e2883b303848b1478d0f4eff0e2, type: 2}
+    - target: {fileID: 3090745841106741952, guid: e6b133961e5fa454cb5d2d30e2586334, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279304447
+      objectReference: {fileID: 0}
     - target: {fileID: 4290405463189068633, guid: e6b133961e5fa454cb5d2d30e2586334, type: 3}
       propertyPath: m_Name
       value: Death
       objectReference: {fileID: 0}
     - target: {fileID: 4290405463189068633, guid: e6b133961e5fa454cb5d2d30e2586334, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4290405463189068634, guid: e6b133961e5fa454cb5d2d30e2586334, type: 3}
       propertyPath: m_RootOrder
@@ -7872,10 +7875,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 516596274}
+    - target: {fileID: 4771292439048842164, guid: e6b133961e5fa454cb5d2d30e2586334, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279304447
+      objectReference: {fileID: 0}
     - target: {fileID: 6223851855963582363, guid: e6b133961e5fa454cb5d2d30e2586334, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: d6026e2883b303848b1478d0f4eff0e2, type: 2}
+    - target: {fileID: 7998777099992676999, guid: e6b133961e5fa454cb5d2d30e2586334, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998777099992676999, guid: e6b133961e5fa454cb5d2d30e2586334, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8083717018240387101, guid: e6b133961e5fa454cb5d2d30e2586334, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

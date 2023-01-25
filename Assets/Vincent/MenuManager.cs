@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+// hanterar all UI - vincent
 public class MenuManager : MonoBehaviour
 {
 
