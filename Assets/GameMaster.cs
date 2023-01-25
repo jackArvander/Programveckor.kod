@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// för checkpoints men det kommer aldrig att bli
 public class GameMaster : MonoBehaviour
 {
 
