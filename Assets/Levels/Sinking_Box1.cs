@@ -15,7 +15,8 @@ public class Sinking_Box1 : MonoBehaviour
     public bool firstMove;
     public bool sinking;
 
-    // Ändrar lådans position.... Skriptet är inte så bra :/ - Alexander
+    // Gör så att lådan sjunker - Tyler
+
     void Start()
     {
      

@@ -22,6 +22,7 @@ public class Sinking_Box2 : MonoBehaviour
      
 
     }
+    // Gör så att lådan sjunker - Tyler
 
 
     void Update()

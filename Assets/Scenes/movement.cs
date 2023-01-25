@@ -43,8 +43,6 @@ public class movement : MonoBehaviour
             rb2d.AddForce(Vector3.right * force * Time.deltaTime);
             transform.localScale = new Vector3(2, 2, 2);
             animator.SetFloat("Speed", 1);
-
-
         }
         else
         {
@@ -71,7 +69,7 @@ public class movement : MonoBehaviour
 
 
         }
-        // 
+        // Tittar om man är på marken och ändrar animationer - Alexander
 
         if (isGrounded == true)
         {
