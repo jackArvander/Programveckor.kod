@@ -23,25 +23,19 @@ public class Enemy_Health : MonoBehaviour
         timerHurt += Time.deltaTime;
         timer += Time.deltaTime;
 
-        if (timer > 1.4f && timer < 1.49)
+        if (timer > 1f && timer < 1.1)
         {
             Destroy(this.gameObject);
         }
-        if (neverDone == true)
-        {
-            if (timerHurt > 0.7f && timerHurt < 1)
 
-            {
-                animator.SetTrigger("Hurt");
-                neverDone = false;
-            }
-        }
         
     }
 
     public void TakeDamage(int damage)
     {
         animator.SetTrigger("Hurt");
+        neverDone = true;
+
         currentHealth -= damage;
         timerHurt = 0;
         if (currentHealth <= 0)
