@@ -21,7 +21,7 @@ public class MenuManager : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape)) // pauses tha game!
         {
 
             if (isPaused)
@@ -41,7 +41,7 @@ public class MenuManager : MonoBehaviour
         
     }
 
-    public void PauseGame()
+    public void PauseGame() // gör timeScale i spelet till 0 så att ingenting kan röra sig
     {
 
         Time.timeScale = 0f;
@@ -49,7 +49,7 @@ public class MenuManager : MonoBehaviour
 
     }
 
-    public void ResumeGame()
+    public void ResumeGame() // gör timeScale till ett igen så att allting kan röra sig igen
     {
 
         Time.timeScale = 1f;
@@ -97,7 +97,7 @@ public class MenuManager : MonoBehaviour
     public void Continue()
     {
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // den tar den aktiva nivån +1, så den tar nästa aktiva scen i spelet.
 
     }
 
