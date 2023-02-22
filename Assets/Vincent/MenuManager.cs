@@ -83,11 +83,11 @@ public class MenuManager : MonoBehaviour
     public void Restart()
     {
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // tar den aktiva scenen och startar den, så den bara startar om nivån.
 
     }
 
-    public async void Credits()
+    public void Credits()
     {
 
         SceneManager.LoadScene("Credits");

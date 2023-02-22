@@ -7,7 +7,7 @@ using UnityEngine;
 public class Sound 
 {
 
-    public string name;
+    public string name; // skapar en fil där man kan få informationen om ljud/ music
     public AudioClip clip;
 
 }

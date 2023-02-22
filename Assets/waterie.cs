@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// skapad av vincent
 public class waterie : MonoBehaviour
 {
     // Start is called before the first frame update
