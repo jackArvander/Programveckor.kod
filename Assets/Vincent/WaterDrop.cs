@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
+// vatten saken på första nivån - vincent
 public class WaterDrop : MonoBehaviour
 {
 
@@ -9,10 +10,10 @@ public class WaterDrop : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(EnableAfterTime());
+        StartCoroutine(EnableAfterTime()); // startar en timer när man spelar
     }
 
-    IEnumerator EnableAfterTime()
+    IEnumerator EnableAfterTime() // da timer
     {
         while (true)
         {

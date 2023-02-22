@@ -5,7 +5,7 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
 
-
+    //Alexander som har gjort
     [SerializeField]
     public Rigidbody2D rb2d;
     public KeyCode right;

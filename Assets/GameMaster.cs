@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// för checkpoints men det kommer aldrig att bli
+// skapad av vincent fajersson
 public class GameMaster : MonoBehaviour
 {
 
     private static GameMaster instance;
-    public Vector2 lastCheckPointPos;
+    public Vector2 lastCheckPointPos; // sparar spelarens position för checkpoint
 
     private void Awake()
     {

@@ -10,27 +10,44 @@ public class EnemyMelee : MonoBehaviour
     public LayerMask playerLayer;
     public Animator animator;
     public float timer;
-   // Fiendens skada och att den gör animationen i tid - Alexander
+    public float timerhurt = 4;
+    public bool hasDone = true;
+    // Fiendens skada och att den gör animationen i tid - Alexander
     void Update()
     {
 
         timer += Time.deltaTime;
+        timerhurt += Time.deltaTime;
+
         if (timer >= 3)
         {
-            animator.SetTrigger("attack");
             attack();
             timer = 0;
         }
 
+        if (hasDone == true)
+        {
+            if (timerhurt > 0.07f && timerhurt < 0.1f)
+            {
+                Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer);
+                foreach (Collider2D player in hitPlayer)
+                {
+                    player.GetComponent<HeathSystem>().TakeDamage(attackDamage);
+                }
+                hasDone = false;
+            }
+
+        }
+
 
     }
+    // Attackerar och gör timer för att göra animationerna - Alexander
     void attack()
     {
-        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer);
-        foreach (Collider2D player in hitPlayer)
-        {
-            player.GetComponent<HeathSystem>().TakeDamage(attackDamage);
-        }
+        animator.SetTrigger("attack");
+        timerhurt = 0;
+        hasDone = true;
+       
 
     }
     void OnDrawGizmosSelected()

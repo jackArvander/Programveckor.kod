@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// skapad av vincent fajersson
 public class CheeseTouch : MonoBehaviour
 {
 
@@ -14,7 +15,7 @@ public class CheeseTouch : MonoBehaviour
     private void Start()
     {
 
-        winMenu.SetActive(false);
+        winMenu.SetActive(false); // gör vinst menyn inte aktiv så du inte kan bara skippa olika banor
         
     }
 
@@ -23,7 +24,7 @@ public class CheeseTouch : MonoBehaviour
         timer += Time.deltaTime;
 
 
-        if (timer > 2.4f && timer < 2.49)
+        if (timer > 2.4f && timer < 2.49) // timer så att victory() koden inte spelas på direkten
         {
             victory();
             
@@ -47,7 +48,7 @@ public class CheeseTouch : MonoBehaviour
 
     }
 
-    void victory()
+    void victory() // gör winMenu till true
     {
 
     winMenu.SetActive(true);
