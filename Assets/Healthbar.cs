@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Healthbar : MonoBehaviour
 {
-    
+    //försök till en health bar som inte funkade - jack
     
         public HeathSystem playerHealthScript;
         public Slider healthBar;
