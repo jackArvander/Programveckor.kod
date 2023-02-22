@@ -41,6 +41,7 @@ public class EnemyMelee : MonoBehaviour
 
 
     }
+    // Attackerar och gör timer för att göra animationerna - Alexander
     void attack()
     {
         animator.SetTrigger("attack");

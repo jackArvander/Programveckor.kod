@@ -16,7 +16,7 @@ public class HeathSystem : MonoBehaviour
     public bool isDeath = false;
     public float timerHurt = 2;
 
-    // Hälsa och om man tar skada. - Alexander
+    // Hälsa och om man tar skada och spelar animationer beroende på om man tar skada. - Alexander
     void Start()
     {
         currentHealth = health;
